@@ -1,7 +1,6 @@
-import asyncio
 from app.database import database
-from bson.json_util import dumps, loads
 from app.modules.users.models import UserModel
+from app.util import handle_object_id
 
 class UserRepository:
   def __init__(self):
@@ -9,7 +8,7 @@ class UserRepository:
   
   async def get_all(self):
     cursor = self.collection.find()
-    return await cursor.to_list(50)
+    return list(map(lambda document: handle_object_id(document), await cursor.to_list(1000)))
 
   # TODO
   def add(self, user: UserModel):

@@ -1,14 +1,17 @@
+import asyncio
 from app.database import database
+from bson.json_util import dumps, loads
 from app.modules.users.models import UserModel
 
-# TODO
 class UserRepository:
   def __init__(self):
-    self.repository = database.get_collection("users")
+    self.collection = database.get_collection("users")
   
-  def get_all(self):
-    return None
+  async def get_all(self):
+    cursor = self.collection.find()
+    return await cursor.to_list(50)
 
+  # TODO
   def add(self, user: UserModel):
     return None
 

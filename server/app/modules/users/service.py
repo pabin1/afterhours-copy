@@ -1,13 +1,13 @@
-# from app.modules.users.repository import repository
+from app.modules.users.repository import repository
 from app.modules.users.models import UserModel
 
 # TODO
 class UserService:
   def __init__(self):
-    return None
+    self.repository = repository
 
-  def get_users(self):
-    return None
+  async def get_users(self):
+    return await self.repository.get_all()
 
   def add_user(self, user: UserModel):
     return None

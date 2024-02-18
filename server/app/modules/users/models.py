@@ -7,6 +7,7 @@ class UserModel(BaseModel):
   id: Optional[PyObjectId] = Field(alias="_id", default=None)
   username: str = Field(...)
   email: str = Field(...)
+  fullname: str = Field(...)
   hashed_password: str = Field(default=None)
 
   model_config = {
@@ -14,7 +15,9 @@ class UserModel(BaseModel):
       "examples": [
         {
           "username": "test",
-          "email": "test@gmail.com"
+          "email": "test@gmail.com",
+          "fullname": "testy tester",
+          "hashed_password": "randomlyhashedpassword"
         }
       ]
     }

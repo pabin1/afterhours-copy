@@ -1,16 +1,19 @@
 from fastapi import APIRouter, HTTPException
 from app.modules.users.service import service
-from app.modules.users.models import UserModel
+from app.modules.users.models import UserModel, UserCollection
 
 router = APIRouter()
 
 @router.get("/")
-async def read_users(status_code = 200):
-  return service.get_users()
+async def read_users(
+  status_code = 200,
+  response_model=UserCollection,
+):
+  return await service.get_users()
 
 @router.post("/add")
 async def add_user(user: UserModel, status_code = 201):
-  id = service.add_user(user)
+  id = await service.add_user(user)
   if id:
     return {"id": id}
   else:

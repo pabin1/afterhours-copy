@@ -32,7 +32,7 @@ class SignInView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.normal,
-                      color: black,
+                      color: praxisBlack,
                     ),
                   ),
                   Text(
@@ -40,7 +40,7 @@ class SignInView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w100,
-                      color: black,
+                      color: praxisBlack,
                     ),
                   ),
                 ],
@@ -67,11 +67,11 @@ class SignInView extends StatelessWidget {
                 child: const Text(
                   "Forgot Password?",
                   style: TextStyle(
-                    color: black,
+                    color: praxisBlack,
                     fontSize: 12,
                     fontWeight: FontWeight.w100,
                     decoration: TextDecoration.underline,
-                    decorationColor: black,
+                    decorationColor: praxisBlack,
                   ),
                 ),
               ),
@@ -79,7 +79,7 @@ class SignInView extends StatelessWidget {
             //Log In
             Container(
               decoration: const BoxDecoration(
-                color: red,
+                color: praxisRed,
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
               child: TextButton(
@@ -87,7 +87,7 @@ class SignInView extends StatelessWidget {
                 child: const Text(
                   "Log In",
                   style: TextStyle(
-                    color: white,
+                    color: praxisWhite,
                   ),
                 ),
               ),
@@ -98,18 +98,18 @@ class SignInView extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.only(right: 10),
-                    child: const Divider(color: black),
+                    child: const Divider(color: praxisBlack),
                   ),
                 ),
                 const Text("or",
                     style: TextStyle(
-                      color: black,
+                      color: praxisBlack,
                       fontWeight: FontWeight.bold,
                     )),
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.only(left: 10),
-                    child: const Divider(color: black),
+                    child: const Divider(color: praxisBlack),
                   ),
                 ),
               ],
@@ -129,7 +129,7 @@ class SignInView extends StatelessWidget {
                     onPressed: () async {},
                     child: const Text(
                       "Sign In With Facebook",
-                      style: TextStyle(color: white),
+                      style: TextStyle(color: praxisWhite),
                     ),
                   ),
                 ],
@@ -138,7 +138,7 @@ class SignInView extends StatelessWidget {
             //Sign In with Google
             Container(
               decoration: BoxDecoration(
-                  color: white,
+                  color: praxisWhite,
                   borderRadius: const BorderRadius.all(Radius.circular(5)),
                   boxShadow: [
                     BoxShadow(
@@ -150,20 +150,20 @@ class SignInView extends StatelessWidget {
               child: TextButton(
                 onPressed: () async {},
                 child: const Text("Sign In With Google",
-                    style: TextStyle(color: black)),
+                    style: TextStyle(color: praxisBlack)),
               ),
             ),
             //Sign In with Apple
             Container(
               decoration: const BoxDecoration(
-                color: black,
+                color: praxisBlack,
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
               child: TextButton(
                 onPressed: () async {},
                 child: const Text(
                   "Sign In With Apple",
-                  style: TextStyle(color: white),
+                  style: TextStyle(color: praxisWhite),
                 ),
               ),
             ),
@@ -173,18 +173,18 @@ class SignInView extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.only(right: 10),
-                    child: const Divider(color: black),
+                    child: const Divider(color: praxisBlack),
                   ),
                 ),
                 const Text("or",
                     style: TextStyle(
-                      color: black,
+                      color: praxisBlack,
                       fontWeight: FontWeight.bold,
                     )),
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.only(left: 10),
-                    child: const Divider(color: black),
+                    child: const Divider(color: praxisBlack),
                   ),
                 ),
               ],
@@ -192,14 +192,14 @@ class SignInView extends StatelessWidget {
             //Sign Up
             Container(
               decoration: const BoxDecoration(
-                color: red,
+                color: praxisRed,
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
               child: TextButton(
                 onPressed: () async {},
                 child: const Text(
                   "Sign Up",
-                  style: TextStyle(color: white),
+                  style: TextStyle(color: praxisWhite),
                 ),
               ),
             ),

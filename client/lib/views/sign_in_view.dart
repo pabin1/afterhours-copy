@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:praxis_afterhours/constants/colors.dart';
+import 'package:praxis_afterhours/views/create_account_view.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -49,14 +49,14 @@ class SignInView extends StatelessWidget {
             //Email Address
             const TextField(
               decoration: InputDecoration(
-                hintText: "Email Address",
+                labelText: "Email Address",
               ),
             ),
             //Password
             const TextField(
               obscureText: true,
               decoration: InputDecoration(
-                hintText: "Password",
+                labelText: "Password",
               ),
             ),
             //Forgot Password
@@ -117,13 +117,19 @@ class SignInView extends StatelessWidget {
             //Sign In with Facebook
             Container(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 12, 135, 239),
+                color: Color(0xFF125EEE),
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
-                    FontAwesomeIcons.facebook,
+                  // const Icon(
+                  //   FontAwesomeIcons.facebook,
+                  // ),
+                  Image.asset(
+                    "images/facebook.png",
+                    width: 30,
+                    height: 30,
                   ),
                   TextButton(
                     onPressed: () async {},
@@ -147,10 +153,20 @@ class SignInView extends StatelessWidget {
                       blurRadius: 7,
                     ),
                   ]),
-              child: TextButton(
-                onPressed: () async {},
-                child: const Text("Sign In With Google",
-                    style: TextStyle(color: praxisBlack)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "images/google.png",
+                    width: 30,
+                    height: 30,
+                  ),
+                  TextButton(
+                    onPressed: () async {},
+                    child: const Text("Sign In With Google",
+                        style: TextStyle(color: praxisBlack)),
+                  ),
+                ],
               ),
             ),
             //Sign In with Apple
@@ -159,12 +175,22 @@ class SignInView extends StatelessWidget {
                 color: praxisBlack,
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
-              child: TextButton(
-                onPressed: () async {},
-                child: const Text(
-                  "Sign In With Apple",
-                  style: TextStyle(color: praxisWhite),
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "images/apple.png",
+                    width: 25,
+                    height: 25,
+                  ),
+                  TextButton(
+                    onPressed: () async {},
+                    child: const Text(
+                      "Sign In With Apple",
+                      style: TextStyle(color: praxisWhite),
+                    ),
+                  ),
+                ],
               ),
             ),
             //Divider (----or-----)
@@ -196,7 +222,14 @@ class SignInView extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
               child: TextButton(
-                onPressed: () async {},
+                onPressed: () async {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CreateAccountView(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "Sign Up",
                   style: TextStyle(color: praxisWhite),

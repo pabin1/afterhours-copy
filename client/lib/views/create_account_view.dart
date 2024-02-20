@@ -27,9 +27,9 @@ class CreateAccountView extends StatelessWidget {
         margin: margins,
         child: Form(
           key: _formKey,
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          child: ListView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                   alignment: Alignment.topLeft,
@@ -41,7 +41,6 @@ class CreateAccountView extends StatelessWidget {
                   )),
               Container(
                 alignment: Alignment.bottomCenter,
-                // margin: margins,
                 child: const FittedBox(
                   fit: BoxFit.scaleDown,
                   child:
@@ -49,8 +48,7 @@ class CreateAccountView extends StatelessWidget {
                 ),
               ),
               Container(
-                alignment: Alignment.center,
-                // padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(12.0),
                 child: BasicTextField(
                   labelText: "Username",
@@ -61,7 +59,6 @@ class CreateAccountView extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.center,
-                // padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(12.0),
                 child: BasicTextField(
                   labelText: "Full Name",
@@ -72,7 +69,6 @@ class CreateAccountView extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.center,
-                // padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(12.0),
                 child: BasicTextField(
                   labelText: "Email Address",
@@ -83,7 +79,6 @@ class CreateAccountView extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.center,
-                // padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(12.0),
                 child: BasicTextField(
                   labelText: "Password",
@@ -95,7 +90,6 @@ class CreateAccountView extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                // padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(12.0),
                 child: const Text(
                     "Your password must have\n • At least 8 characters\n • At least one number\n • At least one special character"),
@@ -110,7 +104,7 @@ class CreateAccountView extends StatelessWidget {
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       print("All fields valid.");
-                      //insert sign-in logic here
+                      //insert create account logic here
                     }
                   },
                   child: const Text("Sign Up",

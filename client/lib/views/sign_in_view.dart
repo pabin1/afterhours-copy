@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:praxis_afterhours/app_utils/basic_text_field.dart';
 import 'package:praxis_afterhours/constants/colors.dart';
 import 'package:praxis_afterhours/views/create_account_view.dart';
+import 'package:praxis_afterhours/views/join_hunt_view.dart';
 
 class SignInView extends StatelessWidget {
   SignInView({super.key});
@@ -98,6 +99,12 @@ class SignInView extends StatelessWidget {
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       print("All fields valid.");
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => JoinHuntView(),
+                      ),
+                    );
                       //insert sign-in logic here
                     }
                   },

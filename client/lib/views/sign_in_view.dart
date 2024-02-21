@@ -71,6 +71,7 @@ class SignInView extends StatelessWidget {
                 fieldType: BasicTextFieldType.custom,
                 editingController: passwordController,
                 validatorError: "Please enter your password",
+                obscureText: true,
               ),
               //Forgot Password
               Container(
@@ -98,11 +99,11 @@ class SignInView extends StatelessWidget {
                 child: TextButton(
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
-                      print("All fields valid.");
-                      Navigator.push(
+                      // print("All fields valid.");
+                      Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => JoinHuntView(),
+                        builder: (context) => const JoinHuntView(),
                       ),
                     );
                       //insert sign-in logic here

@@ -103,7 +103,6 @@ class CreateAccountView extends StatelessWidget {
                 child: TextButton(
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
-                      print("All fields valid.");
                       //insert create account logic here
                     }
                   },

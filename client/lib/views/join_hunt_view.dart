@@ -20,11 +20,11 @@ class JoinHuntView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () => {},
-            icon: Icon(Icons.info_outline),
+            icon: const Icon(Icons.info_outline),
           ),
           IconButton(
             onPressed: () => {},
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications),
           )
         ],
         backgroundColor: praxisRed,

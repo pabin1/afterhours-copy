@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:praxis_afterhours/app_utils/basic_text_field.dart';
 import 'package:praxis_afterhours/constants/colors.dart';
+import 'package:praxis_afterhours/views/bottom_nav_bar.dart';
 import 'package:praxis_afterhours/views/create_account_view.dart';
-import 'package:praxis_afterhours/views/join_hunt_view.dart';
 
 class SignInView extends StatelessWidget {
   SignInView({super.key});
@@ -101,11 +101,11 @@ class SignInView extends StatelessWidget {
                     if (_formKey.currentState!.validate()) {
                       // print("All fields valid.");
                       Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const JoinHuntView(),
-                      ),
-                    );
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BottomNavBar(),
+                        ),
+                      );
                       //insert sign-in logic here
                     }
                   },
@@ -147,25 +147,22 @@ class SignInView extends StatelessWidget {
                   color: Color(0xFF125EEE),
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // const Icon(
-                    //   FontAwesomeIcons.facebook,
-                    // ),
-                    Image.asset(
-                      "images/facebook.png",
-                      width: 30,
-                      height: 30,
-                    ),
-                    TextButton(
-                      onPressed: () async {},
-                      child: const Text(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "images/facebook.png",
+                        width: 30,
+                        height: 30,
+                      ),
+                      const Text(
                         "Sign In With Facebook",
                         style: TextStyle(color: praxisWhite),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               //Sign In with Google
@@ -180,20 +177,22 @@ class SignInView extends StatelessWidget {
                         blurRadius: 7,
                       ),
                     ]),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "images/google.png",
-                      width: 30,
-                      height: 30,
-                    ),
-                    TextButton(
-                      onPressed: () async {},
-                      child: const Text("Sign In With Google",
-                          style: TextStyle(color: praxisBlack)),
-                    ),
-                  ],
+                child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "images/google.png",
+                        width: 30,
+                        height: 30,
+                      ),
+                      const Text(
+                        "Sign In With Google",
+                        style: TextStyle(color: praxisBlack),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               //Sign In with Apple
@@ -202,22 +201,22 @@ class SignInView extends StatelessWidget {
                   color: praxisBlack,
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "images/apple.png",
-                      width: 25,
-                      height: 25,
-                    ),
-                    TextButton(
-                      onPressed: () async {},
-                      child: const Text(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "images/apple.png",
+                        width: 25,
+                        height: 25,
+                      ),
+                      const Text(
                         "Sign In With Apple",
                         style: TextStyle(color: praxisWhite),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               //Divider (----or-----)

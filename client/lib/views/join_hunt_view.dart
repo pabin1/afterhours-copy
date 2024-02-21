@@ -9,7 +9,7 @@ class JoinHuntView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  const Text(
+        title: const Text(
           "Join A Hunt",
           style: TextStyle(
             color: praxisWhite,
@@ -18,15 +18,11 @@ class JoinHuntView extends StatelessWidget {
         ),
         backgroundColor: praxisRed,
       ),
-      body: Column(   
+      body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(
-              top: 2,
-              bottom: 2,
-              left: 0,
-              right: 0
-            ),
+            padding:
+                const EdgeInsets.only(top: 2, bottom: 2, left: 0, right: 0),
             child: TextButton(
               onPressed: () {},
               child: const HuntTile(
@@ -37,35 +33,28 @@ class JoinHuntView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(
-              top: 2,
-              bottom: 2,
-              left: 0,
-              right: 0
-            ), child: TextButton(
-                onPressed: () async {},
-                child: const HuntTile(
-                  title: "Friday Employee Drinks",
-                  location: "Looney's Pub",
-                  date: "02/07/2024 at 7:30 PM",
-                ),
+            padding:
+                const EdgeInsets.only(top: 2, bottom: 2, left: 0, right: 0),
+            child: TextButton(
+              onPressed: () async {},
+              child: const HuntTile(
+                title: "Friday Employee Drinks",
+                location: "Looney's Pub",
+                date: "02/07/2024 at 7:30 PM",
               ),
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.only(
-              top: 2,
-              bottom: 2,
-              left: 0,
-              right: 0
-            ),
+            padding:
+                const EdgeInsets.only(top: 2, bottom: 2, left: 0, right: 0),
             child: TextButton(
-                onPressed: () async {},
-                child: const HuntTile(
-                  title: "End of Quarter Party",
-                  location: "Cornerstone Grill & Loft",
-                  date: "02/14/2024 at 7:00 PM",
-                ),
+              onPressed: () async {},
+              child: const HuntTile(
+                title: "End of Quarter Party",
+                location: "Cornerstone Grill & Loft",
+                date: "02/14/2024 at 7:00 PM",
               ),
+            ),
           ),
         ],
       ),

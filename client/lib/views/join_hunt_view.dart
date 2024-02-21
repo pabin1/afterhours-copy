@@ -18,13 +18,19 @@ class JoinHuntView extends StatelessWidget {
           ),
         ),
         actions: [
-          IconButton(
-            onPressed: () => {},
-            icon: const Icon(Icons.info_outline),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () => {},
+              icon: const Icon(Icons.info_outline),
+            ),
           ),
-          IconButton(
-            onPressed: () => {},
-            icon: const Icon(Icons.notifications),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () => {},
+              icon: const Icon(Icons.notifications),
+            ),
           )
         ],
         backgroundColor: praxisRed,

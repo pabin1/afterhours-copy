@@ -9,6 +9,7 @@ class JoinHuntView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         title: const Text(
           "Join A Hunt",
           style: TextStyle(
@@ -16,6 +17,16 @@ class JoinHuntView extends StatelessWidget {
             fontSize: 35,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () => {},
+            icon: Icon(Icons.info_outline),
+          ),
+          IconButton(
+            onPressed: () => {},
+            icon: Icon(Icons.notifications),
+          )
+        ],
         backgroundColor: praxisRed,
       ),
       body: Column(

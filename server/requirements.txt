@@ -1,0 +1,6 @@
+fastapi
+pydantic
+uvicorn
+motor
+asyncio
+python-dotenv
